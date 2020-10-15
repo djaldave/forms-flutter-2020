@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             emailField(),
             passwordField(),
-            // submitButton(),
+            submitButton(),
           ],
         ),
       ),
@@ -42,5 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget submitButton() {}
+  Widget submitButton() {
+    return RaisedButton(child: Text("Submit"), onPressed: () {});
+  }
 }
