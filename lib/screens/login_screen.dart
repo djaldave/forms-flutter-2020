@@ -49,6 +49,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget submitButton() {
     return RaisedButton(
-        color: Colors.blue[100], child: Text("Submit"), onPressed: () {});
+        color: Colors.blue[100],
+        child: Text("Submit"),
+        onPressed: () {
+          formKey.currentState.reset();
+        });
   }
 }
