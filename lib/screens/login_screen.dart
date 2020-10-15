@@ -9,12 +9,12 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(40),
       child: Form(
         child: Column(
           children: [
             emailField(),
-            // passwordField(),
+            passwordField(),
             // submitButton(),
           ],
         ),
@@ -32,6 +32,15 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget passwordField() {}
+  Widget passwordField() {
+    return TextFormField(
+      obscureText: true,
+      decoration: InputDecoration(
+        labelText: "Enter Password",
+        hintText: "Password",
+      ),
+    );
+  }
+
   Widget submitButton() {}
 }
