@@ -41,6 +41,9 @@ class _LoginScreenState extends State<LoginScreen> {
           return 'Please enter a valid email';
         }
       },
+      onSaved: (String value) {
+        print(value);
+      },
     );
   }
 
@@ -58,6 +61,9 @@ class _LoginScreenState extends State<LoginScreen> {
           return 'password must be at least 4 character';
         }
       },
+      onSaved: (String value) {
+        print(value);
+      },
     );
   }
 
@@ -66,7 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
         color: Colors.blue[100],
         child: Text("Submit"),
         onPressed: () {
-          print(formKey.currentState.validate());
+          if (formKey.currentState.validate()) {
+            formKey.currentState.save();
+          }
         });
   }
 }
